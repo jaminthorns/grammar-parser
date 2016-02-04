@@ -1,0 +1,7 @@
+; Grammar defining any string over {a, b, c}
+; This grammar provides a good example of indirect left recursion and derivation
+; becomes extremely inefficient with increasing string length
+<S> ::= <A> | ""
+<A> ::= <B>
+<B> ::= <C>
+<C> ::= <S> "a" | <S> "b" | <S> "c"

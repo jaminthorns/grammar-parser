@@ -1,0 +1,16 @@
+; Grammar defining proper format for a date according to ISO 8601
+<S> ::= <Y> "-" <M> "-" <T>
+
+; Year
+<Y> ::= <D> <D> <D> <D>
+
+; Month
+<M> ::= "0" <D> | "1" <A>
+<A> ::= "0" | "1" | "2"
+
+; Date
+<T> ::= "0" <D> | "1" <D> | "2" <D> | "3" <B>
+<B> ::= "0" | "1"
+
+; Digits
+<D> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
